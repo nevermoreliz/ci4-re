@@ -36,18 +36,18 @@ class Templater extends BaseController
         }
     }
 
-    public function viewAdmin($content, $data = array(), $base = "layout/layout_admin")
+    public function viewAdmin($content, $data = array(), $base = "admin/layout_admin/index")
     {
         if ($this->request->isAJAX()) {
             $ajax = view($content, $data);
             return css_tag($content) . $ajax . script_tag($content);
         } else {
 
-            $data['footer'] = view('admin/component/footer', $data);
-            $data['sidebar'] = view('admin/component/sidebar', $data);
-            $data['header'] = view('admin/component/header', $data);
-
+            
+            $data['sidebar'] = view('admin/layout_admin/menu', $data);
+            $data['header'] = view('admin/layout_admin/header', $data);
             $data['content'] = view($content, $data);
+            $data['footer'] = view('admin/layout_admin/footer', $data);
 
             return view($base, $data);
         }

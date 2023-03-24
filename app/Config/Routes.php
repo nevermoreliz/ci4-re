@@ -2,6 +2,9 @@
 
 namespace Config;
 
+use CodeIgniter\Debug\Toolbar\Collectors\Routes;
+use CodeIgniter\Router\Router;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -10,7 +13,7 @@ $routes = Services::routes();
  * Router Setup
  * --------------------------------------------------------------------
  */
-$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultNamespace('App\Controllers\Web');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
@@ -30,6 +33,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+
+$routes->group('admin',['namespace'=>'App\Controllers\Admin'],function ($routes)
+{
+    $routes->get('/','Dashboard::index',['as'=>'dashboard']);
+});
 
 /*
  * --------------------------------------------------------------------
