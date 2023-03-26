@@ -31,13 +31,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url() ;?>dashboard/font/CS-Interface/style.css" />
     <!-- Font Tags End -->
-    <!-- Vendor Styles Start -->
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor/OverlayScrollbars.min.css" />
+    <!-- Vendor_theme Styles Start -->
+    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor_theme/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor_theme/OverlayScrollbars.min.css" />
 
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor/glide.core.min.css" />
+    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor_theme/glide.core.min.css" />
 
-    <!-- Vendor Styles End -->
+    <!-- Vendor_theme Styles End -->
     <!-- Template Base Styles Start -->
     <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/styles.css" />
     <!-- Template Base Styles End -->
@@ -535,19 +535,19 @@
 
     <!-- Search Modal End -->
 
-    <!-- Vendor Scripts Start -->
-    <script src="<?= base_url() ;?>dashboard/js/vendor/jquery-3.5.1.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor/OverlayScrollbars.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor/autoComplete.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor/clamp.min.js"></script>
+    <!-- Vendor_theme Scripts Start -->
+    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/jquery-3.5.1.min.js"></script>
+    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/OverlayScrollbars.min.js"></script>
+    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/autoComplete.min.js"></script>
+    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/clamp.min.js"></script>
     <script src="<?= base_url() ;?>dashboard/icon/acorn-icons.js"></script>
     <script src="<?= base_url() ;?>dashboard/icon/acorn-icons-interface.js"></script>
     <script src="<?= base_url() ;?>dashboard/icon/acorn-icons-medical.js"></script>
 
-    <script src="<?= base_url() ;?>dashboard/js/vendor/glide.min.js"></script>
+    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/glide.min.js"></script>
 
-    <!-- Vendor Scripts End -->
+    <!-- Vendor_theme Scripts End -->
 
     <!-- Template Base Scripts Start -->
     <script src="<?= base_url() ;?>dashboard/js/base/helpers.js"></script>
@@ -556,12 +556,10 @@
     <script src="<?= base_url() ;?>dashboard/js/base/search.js"></script>
     <script src="<?= base_url() ;?>dashboard/js/base/settings.js"></script>
     <!-- Template Base Scripts End -->
+
     <!-- Page Specific Scripts Start -->
-
     <script src="<?= base_url() ;?>dashboard/js/cs/glide.custom.js"></script>
-
     <script src="<?= base_url() ;?>dashboard/js/pages/dashboards.patient.js"></script>
-
     <script src="<?= base_url() ;?>dashboard/js/common.js"></script>
     <script src="<?= base_url() ;?>dashboard/js/scripts.js"></script>
     <!-- Page Specific Scripts End -->
