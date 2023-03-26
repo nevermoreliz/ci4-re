@@ -10,4 +10,10 @@ class Login extends BaseController
     {
         return view('auth/login');
     }
+
+    public function signin()  {
+        dd($this->request->getPost());
+    }
+
+
 }

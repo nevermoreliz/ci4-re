@@ -36,6 +36,7 @@ $routes->get('/', 'Home::index');
 
 $routes->group('auth', ['namespace' => 'App\Controllers\Auth'], function ($routes) {
     $routes->get('/', 'Login::index', ['as' => 'login']);
+    $routes->get('/', 'Login::signin', ['as' => 'signin']);
 });
 
 $routes->get('/auth', 'App\Controllers\Auth\Login::index');
