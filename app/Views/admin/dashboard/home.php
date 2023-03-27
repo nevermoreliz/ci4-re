@@ -9,8 +9,13 @@
                         <div class="sw-13 position-relative mb-3">
                             <img src="<?= base_url(); ?>dashboard/img/profile/user1.png" class="img-fluid rounded-xl" alt="thumb" />
                         </div>
-                        <div class="h5 mb-0">Alicia Owens</div>
-                        <div class="text-muted">Highschool Teacher</div>
+                        <?php $nombre = ucfirst(strtolower(session('nombre'))); ?>
+                        <?php $paterno = ucfirst(strtolower(session('paterno'))); ?>
+                        <?php $materno = ucfirst(strtolower(session('materno'))); ?>
+                        <?php $full =  $nombre . ' ' . $paterno . ' ' . $materno; ?>
+                        <?php $full =  (!is_null($paterno) || !empty($paterno)) ? $nombre . ' ' . $paterno : $nombre . ' ' . $materno; ?>
+                        <div class="h5 mb-0"><?= $full ;?></div>
+                        <div class="text-muted"><?= session('cargo') ;?></div>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between mb-2">

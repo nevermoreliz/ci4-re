@@ -1,91 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-
-    <title>Document</title>
-
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
     <style>
-        .login {
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
             min-height: 100vh;
-        }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #4070f4;
 
-        .bg-image {
-            background-image: url('https://source.unsplash.com/WEQbe2jBg40/600x1200');
+            background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.4)), url('https://admisionestudiantil.upea.bo/assets/frontend/education-master/images/slider/upea1.png') no-repeat center center fixed;
+            /* background-position: center center;
+            height: auto;
+            background-attachment: fixed; */
             background-size: cover;
-            background-position: center;
+
         }
 
-        .login-heading {
-            font-weight: 300;
+        .wrapper {
+            position: relative;
+            max-width: 430px;
+            width: 100%;
+            background: #fff;
+            padding: 34px;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .btn-login {
-            font-size: 0.9rem;
-            letter-spacing: 0.05rem;
-            padding: 0.75rem 1rem;
+        .wrapper h2 {
+            position: relative;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .wrapper h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 28px;
+            border-radius: 12px;
+            background: #4070f4;
+        }
+
+        .wrapper form {
+            margin-top: 30px;
+        }
+
+        .wrapper form .input-box {
+            height: 52px;
+            margin: 28px 0;
+        }
+
+        form .input-box input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            padding: 0 15px;
+            font-size: 17px;
+            font-weight: 400;
+            color: #333;
+            border: 1.5px solid #C7BEBE;
+            border-bottom-width: 2.5px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .input-box input:focus,
+        .input-box input:valid {
+            border-color: #4070f4;
+        }
+
+        form .policy {
+            display: flex;
+            align-items: center;
+        }
+
+        form h3 {
+            color: #707070;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .input-box.button input {
+            color: #fff;
+            letter-spacing: 1px;
+            border: none;
+            background: #4070f4;
+            cursor: pointer;
+        }
+
+        .input-box.button input:hover {
+            background: #0e4bf1;
+        }
+
+        form .text h3 {
+            color: #333;
+            width: 100%;
+            text-align: center;
+        }
+
+        form .text h3 a {
+            color: #4070f4;
+            text-decoration: none;
+        }
+
+        form .text h3 a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <div class="wrapper">
+        <h2>Iniciar Sesi&oacute;n</h2>
+        <?php if (session('msg')) :; ?>
+            <h3 style="color:red; padding-top:10px; padding-bottom:0px"><?= session('msg.body'); ?></h2>
+        <?php endif; ?>
+        <form action="<?= base_url(route_to('signin')); ?>" method="POST">
+            <div class="input-box">
+                <input type="text" name="username" placeholder="ingrese su nombre de usuario" value="<?= old('username'); ?>">
 
-    <div class="container-fluid ps-md-0">
-        <div class="row g-0">
-            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-            <div class="col-md-8 col-lg-6">
-                <div class="login d-flex align-items-center py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="login-heading mb-4">Bienvenido</h3>
-                                <?= session('msg') ?>
-
-                                <!-- Sign In Form -->
-                                <form action="<?= base_url(route_to('signin')) ?>" method="POST">
-                                    <div class="form-floating mb-3">
-                                        <label for="floatingInput">Usuario</label>
-                                        <input type="text" class="form-control" name="username" id="floatingInput" placeholder="Ingrese su Usuario">
-
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <label for="floatingPassword">Contraseña</label>
-                                        <input type="password" name="contrasena" class="form-control" id="floatingPassword" placeholder="Ingrese su Contraseña">
-
-                                    </div>
-
-                                    <!-- <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="rememberPasswordCheck">
-                                        <label class="form-check-label" for="rememberPasswordCheck">
-                                            Remember password
-                                        </label>
-                                    </div> -->
-
-                                    <div class="d-grid">
-                                        <input class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit" value="Ingresar">
-                                        <!-- <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Iniciar Sesi&oacute;n </button> -->
-                                        <!-- <div class="text-center">
-                                            <a class="small" href="#">Forgot password?</a>
-                                        </div> -->
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-danger" style="color:red"><?= session('errors.username'); ?></p>
             </div>
-        </div>
+
+            <div class="input-box">
+                <input type="password" name="contrasenia" placeholder="ingrese su contraseña">
+
+                <p class="text-danger" style="color:red"><?= session('errors.contrasenia'); ?></p>
+            </div>
+
+
+            <div class="input-box button">
+                <input type="Submit" value="Ingresar">
+            </div>
+
+        </form>
     </div>
-
-
 </body>
 
 </html>

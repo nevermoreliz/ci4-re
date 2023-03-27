@@ -36,12 +36,13 @@ $routes->get('/', 'Home::index');
 
 $routes->group('auth', ['namespace' => 'App\Controllers\Auth'], function ($routes) {
     $routes->get('/', 'Login::index', ['as' => 'login']);
-    $routes->get('/', 'Login::signin', ['as' => 'signin']);
+    $routes->post('signin', 'Login::signin', ['as' => 'signin']);
+    $routes->get('logout', 'Login::logout', ['as' => 'logout']);
 });
 
 $routes->get('/auth', 'App\Controllers\Auth\Login::index');
 
-$routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+$routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'auth:ADMINISTRADOR,TECNICO,SECRETARIA'], function ($routes) {
     $routes->get('/', 'Dashboard::index', ['as' => 'dashboard']);
 });
 

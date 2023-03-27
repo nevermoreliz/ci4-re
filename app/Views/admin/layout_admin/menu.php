@@ -16,7 +16,13 @@
     <div class="user-container d-flex">
         <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img class="profile" alt="profile" src="<?= base_url(); ?>dashboard/img/profile/user1.png" />
-            <div class="name">Jhonatan Edgar Flores Lopez</div>
+            <?php $nombre = ucfirst(strtolower(session('nombre'))) ;?>
+            <?php $paterno = ucfirst(strtolower(session('paterno'))) ;?>
+            <?php $materno = ucfirst(strtolower(session('materno'))) ;?>
+            <?php $full =  $nombre .' '. $paterno .' '. $materno;?>
+            <?php $full =  (!is_null($paterno) || !empty($paterno) ) ? $nombre .' '. $paterno : $nombre .' '. $materno; ?>
+            <div class="name"><?= ucfirst($full) ;?></div>
+            
         </a>
 
         <div class="dropdown-menu dropdown-menu-end user-menu wide">
@@ -102,7 +108,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?= base_url(route_to('logout')) ;?>">
                                 <i data-acorn-icon="logout" class="me-2" data-acorn-size="17"></i>
                                 <span class="align-middle">Logout</span>
                             </a>
