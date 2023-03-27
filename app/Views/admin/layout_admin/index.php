@@ -7,67 +7,65 @@
     <title>Acorn Admin Template | Medical Assistant</title>
     <meta name="description" content="Medical Assistant" />
     <!-- Favicon Tags Start -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?= base_url() ;?>dashboard/img/favicon/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="<?= base_url() ;?>dashboard/img/favicon/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="<?= base_url() ;?>dashboard/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="<?= base_url() ;?>dashboard/img/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="<?= base_url() ;?>dashboard/img/favicon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="<?= base_url() ;?>dashboard/img/favicon/favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?= base_url(); ?>dashboard/img/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>dashboard/img/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>dashboard/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>dashboard/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>dashboard/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>dashboard/img/favicon/favicon-128.png" sizes="128x128" />
     <meta name="application-name" content="&nbsp;" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="<?= base_url() ;?>dashboard/img/favicon/mstile-144x144.png" />
-    
+    <meta name="msapplication-TileImage" content="<?= base_url(); ?>dashboard/img/favicon/mstile-144x144.png" />
+
     <!-- Favicon Tags End -->
     <!-- Font Tags Start -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/font/CS-Interface/style.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>dashboard/font/CS-Interface/style.css" />
     <!-- Font Tags End -->
     <!-- Vendor_theme Styles Start -->
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor_theme/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor_theme/OverlayScrollbars.min.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>dashboard/css/vendor_theme/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>dashboard/css/vendor_theme/OverlayScrollbars.min.css" />
 
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/vendor_theme/glide.core.min.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>dashboard/css/vendor_theme/glide.core.min.css" />
 
     <!-- Vendor_theme Styles End -->
     <!-- Template Base Styles Start -->
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/styles.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>dashboard/css/styles.css" />
     <!-- Template Base Styles End -->
 
-    <link rel="stylesheet" href="<?= base_url() ;?>dashboard/css/main.css" />
-    <script src="<?= base_url() ;?>dashboard/js/base/loader.js"></script>
+    <link rel="stylesheet" href="<?= base_url(); ?>dashboard/css/main.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+    <script src="<?= base_url(); ?>dashboard/js/base/loader.js"></script>
 </head>
 
 <body class="rtl">
     <div id="root">
-        
-        <div id="nav" class="nav-container d-flex">
-            
-        <?= $sidebar ;?>
-            
+
+        <div id="nav" class="nav-container d-flex content-nav">
+
+            <?= $sidebar; ?>
+
             <div class="nav-shadow"></div>
         </div>
 
         <main>
-            <div class="container">
-                <!-- Title and Top Buttons Start -->
-                <?= $header ;?>
-                <!-- Title and Top Buttons End -->
-
-                <?= $content ;?>
-
+            <div class="container content-ajax">
+                <?= $content; ?>
             </div>
         </main>
         <!-- Layout Footer Start -->
-        <?= $footer ;?>
+        <?= $footer; ?>
         <!-- Layout Footer End -->
     </div>
 
@@ -353,7 +351,7 @@
     <!-- Theme Settings Modal End -->
 
     <!-- Niches Modal Start -->
-    
+
     <!-- <div class="modal fade modal-right scroll-out-negative" id="niches" data-bs-backdrop="true" tabindex="-1" role="dialog" aria-labelledby="niches" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable full" role="document">
             <div class="modal-content">
@@ -492,7 +490,7 @@
     <!-- Niches Modal End -->
 
     <!-- Theme Settings & Niches Buttons Start -->
-    
+
     <!-- <div class="settings-buttons-container">
         <button type="button" class="btn settings-button btn-primary p-0" data-bs-toggle="modal" data-bs-target="#settings" id="settingsButton">
             <span class="d-inline-block no-delay" data-bs-delay="0" data-bs-offset="0,3" data-bs-toggle="tooltip" data-bs-placement="left" title="Settings">
@@ -509,7 +507,7 @@
     <!-- Theme Settings & Niches Buttons End -->
 
     <!-- Search Modal Start -->
-    
+
     <div class="modal fade modal-under-nav modal-search modal-close-out" id="searchPagesModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -536,33 +534,38 @@
     <!-- Search Modal End -->
 
     <!-- Vendor_theme Scripts Start -->
-    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/jquery-3.5.1.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/OverlayScrollbars.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/autoComplete.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/clamp.min.js"></script>
-    <script src="<?= base_url() ;?>dashboard/icon/acorn-icons.js"></script>
-    <script src="<?= base_url() ;?>dashboard/icon/acorn-icons-interface.js"></script>
-    <script src="<?= base_url() ;?>dashboard/icon/acorn-icons-medical.js"></script>
+    <script src="<?= base_url('dashboard/js/vendor_theme/jquery-3.5.1.min.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/vendor_theme/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/vendor_theme/OverlayScrollbars.min.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/vendor_theme/autoComplete.min.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/vendor_theme/clamp.min.js'); ?>"></script>
 
-    <script src="<?= base_url() ;?>dashboard/js/vendor_theme/glide.min.js"></script>
-
+    <!-- iconos theme -->
+    <script src="<?= base_url('dashboard/icon/acorn-icons.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/icon/acorn-icons-interface.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/icon/acorn-icons-commerce.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/icon/acorn-icons-learning.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/icon/acorn-icons-medical.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/vendor_theme/glide.min.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/components/toasts.js'); ?>"></script>
     <!-- Vendor_theme Scripts End -->
 
     <!-- Template Base Scripts Start -->
-    <script src="<?= base_url() ;?>dashboard/js/base/helpers.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/base/globals.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/base/nav.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/base/search.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/base/settings.js"></script>
+    <script src="<?= base_url('dashboard/js/base/helpers.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/base/globals.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/base/nav.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/base/search.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/base/settings.js'); ?>"></script>
     <!-- Template Base Scripts End -->
 
     <!-- Page Specific Scripts Start -->
-    <script src="<?= base_url() ;?>dashboard/js/cs/glide.custom.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/pages/dashboards.patient.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/common.js"></script>
-    <script src="<?= base_url() ;?>dashboard/js/scripts.js"></script>
+    <script src="<?= base_url('dashboard/js/cs/glide.custom.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/pages/dashboards.patient.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/common.js'); ?>"></script>
+    <script src="<?= base_url('dashboard/js/scripts.js'); ?>"></script>
     <!-- Page Specific Scripts End -->
+
+    <script src="<?= base_url('assets/js/base.js'); ?>"></script>
 </body>
 
 </html>

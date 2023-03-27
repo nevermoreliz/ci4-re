@@ -45,7 +45,7 @@ class Templater extends BaseController
 
             
             $data['sidebar'] = view('admin/layout_admin/menu', $data);
-            $data['header'] = view('admin/layout_admin/header', $data);
+            // $data['header'] = view('admin/layout_admin/header', $data);
             $data['content'] = view($content, $data);
             $data['footer'] = view('admin/layout_admin/footer', $data);
 

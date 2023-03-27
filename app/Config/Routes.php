@@ -42,9 +42,35 @@ $routes->group('auth', ['namespace' => 'App\Controllers\Auth'], function ($route
 
 $routes->get('/auth', 'App\Controllers\Auth\Login::index');
 
-$routes->group('admin', ['namespace' => 'App\Controllers\Admin', 'filter' => 'auth:ADMINISTRADOR,TECNICO,SECRETARIA'], function ($routes) {
-    $routes->get('/', 'Dashboard::index', ['as' => 'dashboard']);
-});
+$routes->group(
+    'admin',
+    [
+        'namespace' => 'App\Controllers\Admin',
+        'filter' => 'auth:ADMINISTRADOR,TECNICO,SECRETARIA'
+    ],
+    function ($routes) {
+
+        $routes->get('/', 'Dashboard::index', ['as' => 'dashboard']);
+
+
+        // $routes->get('publicacion', 'Convenio::index', ['as' => 'publications_index']);
+        // $routes->get('publicacion/crear', 'Convenio::create', ['as' => 'publications_create']);
+        // $routes->post('publicacion/guardar', 'Convenio::store', ['as' => 'publications_store']);
+
+         $routes->group(
+             'publicacion',
+             [
+                 'namespace' => 'App\Controllers\Admin',
+                 'filter' => 'auth:ADMINISTRADOR,TECNICO,SECRETARIA'
+             ],
+             function ($routes) {
+                 $routes->get('/', 'Convenio::index', ['as' => 'publications_index']);
+                 $routes->get('/crear', 'Convenio::create', ['as' => 'publications_create']);
+                 $routes->post('/guardar', 'Convenio::store', ['as' => 'publications_store']);
+             }
+         );
+    }
+);
 
 /*
  * --------------------------------------------------------------------

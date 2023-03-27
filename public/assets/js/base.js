@@ -1,7 +1,9 @@
 window.loading = $('#preloader').show();
+
 $(window).on('load', function () {
 	loading.hide();
 });
+
 $(document)
 	.ajaxStart(function () {
 		loading.show();
@@ -10,32 +12,43 @@ $(document)
 		loading.hide();
 	})
 	.ready(function () {
+// alert('base');
 
-		$('div.boxed').on('click', 'a.menu--link', function (event) {
+		$('div.content-nav').on('click', 'a.menu--link', function (event) {
+
 			event.preventDefault();
 			event.stopPropagation();
-			var content = $('.' + (event.target.getAttribute('data-dest') === null ? 'content' : event.target.getAttribute('data-dest')));
+			var content = $('.' + (event.target.getAttribute('data-dest') === null ? 'content-ajax' : event.target.getAttribute('data-dest')));
 			var url = $(this).attr('href');
 			if (url.substring(0, window.location.origin.length) === window.location.origin) {
 				url = url.substring(window.location.origin.length + 1);
 			}
-			// if (url.substring(0, 17) === 'https://rosas.com') {
-			// 	url = url.substring(18);
-			// }
+
+
 			if (url !== '' && url !== '/') {
-				$.ajax({
-					method: 'post',
-					url: (url.substring(0, 1) === '/' ? '' : '/') + url,
-				}).done(function (resultado) {
-					content.hide(0).html(resultado).fadeIn('slow');
-					$('#toggleMenu').click();
-				});
+
+				try {
+					
+					$.ajax({
+						method: 'get',
+						url: (url.substring(0, 1) === '/' ? '' : '/') + url,
+					}).done(function (resultado) {
+						content.hide(0).html(resultado).fadeIn('slow');
+					});	
+
+				} catch (error) {
+					console.log(error);
+					console.log('fdsa');
+				}
+				
+
 			} else {
+				alert('asdf');
 				content.html('<div class="alert alert-warning"><i class="fa fa-warning"></i> No se encuentra disponible el contenido solicitado.</div>');
 			}
-			if (screen.width < 768) {
-				$('.mainnav-toggle').click();
-			}
+			// if (screen.width < 768) {
+			// 	$('.mainnav-toggle').click();
+			// }
 		});
 
 		window.parametrosModal = function (idModal, titulo, tamano, onEscape, backdrop) {
@@ -50,14 +63,12 @@ $(document)
 				show: true,
 			});
 		};
-
 		window.retornarCookie = function (nombre) {
 			const value = `; ${document.cookie}`;
 			const parts = value.split(`; ${nombre}=`);
 			if (parts.length === 2) return parts.pop().split(';').shift();
 			else return null;
 		};
-        
 		window.agregarCookie = function (nombre, valor, dias) {
 			var expires = '';
 			if (dias) {

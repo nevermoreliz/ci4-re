@@ -40,7 +40,7 @@ class Search {
       data: {
         src: async () => {
           searchInput.setAttribute('placeholder', this.settings.loading);
-          const source = await fetch(this.settings.jsonPath);
+          const source = await fetch('dashboard/'+this.settings.jsonPath);
           const data = await source.json();
           searchInput.setAttribute('placeholder', this.settings.placeholder);
           return data;
